@@ -15,7 +15,9 @@ export interface Book {
 })
 export class BookService {
   private apiUrl = 'http://localhost:5192/api/books';
- // This is your ASP.NET backend URL
+  // This is your ASP.NET backend URL
+
+  selectedBook: Book | null = null; // <--- ADD THIS
 
   constructor(private http: HttpClient) { }
 

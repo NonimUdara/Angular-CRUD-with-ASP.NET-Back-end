@@ -15,12 +15,28 @@ export class BookFormComponent {
     publicationDate: ''
   };
 
-  constructor(private bookService: BookService) {}
+  constructor(private bookService: BookService) { }
 
+  // addBook(): void {
+  //   this.bookService.addBook(this.book).subscribe(() => {
+  //     alert('Book added successfully!');
+  //     window.location.reload(); // ✅ Reloads the page to refresh the book list
+  //   });
+  // }
   addBook(): void {
-    this.bookService.addBook(this.book).subscribe(() => {
-      alert('Book added successfully!');
-      window.location.reload(); // ✅ Reloads the page to refresh the book list
-    });
+    if (this.book.id === 0) {
+      // Add new book
+      this.bookService.addBook(this.book).subscribe(() => {
+        alert('Book added!');
+        window.location.reload();
+      });
+    } else {
+      // Update existing book
+      this.bookService.updateBook(this.book.id, this.book).subscribe(() => {
+        alert('Book updated!');
+        window.location.reload();
+      });
+    }
   }
+
 }
