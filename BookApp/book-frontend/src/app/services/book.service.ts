@@ -15,11 +15,8 @@ export interface Book {
 })
 export class BookService {
   private apiUrl = 'http://localhost:5192/api/books';
-  // This is your ASP.NET backend URL
 
-  selectedBook: Book | null = null; // <--- ADD THIS
-
-  constructor(private http: HttpClient) { }
+  constructor(private http: HttpClient) {}
 
   getBooks(): Observable<Book[]> {
     return this.http.get<Book[]>(this.apiUrl);

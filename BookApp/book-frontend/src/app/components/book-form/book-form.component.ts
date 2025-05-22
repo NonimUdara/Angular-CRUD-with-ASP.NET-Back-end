@@ -1,12 +1,13 @@
-import { Component } from '@angular/core';
+import { Component, Input, OnChanges, SimpleChanges } from '@angular/core';
 import { BookService, Book } from 'src/app/services/book.service';
 
 @Component({
   selector: 'app-book-form',
-  templateUrl: './book-form.component.html',
-  styleUrls: ['./book-form.component.css']
+  templateUrl: './book-form.component.html'
 })
-export class BookFormComponent {
+export class BookFormComponent implements OnChanges {
+  @Input() editBook: Book | null = null;
+
   book: Book = {
     id: 0,
     title: '',
@@ -15,28 +16,25 @@ export class BookFormComponent {
     publicationDate: ''
   };
 
-  constructor(private bookService: BookService) { }
+  constructor(private bookService: BookService) {}
 
-  // addBook(): void {
-  //   this.bookService.addBook(this.book).subscribe(() => {
-  //     alert('Book added successfully!');
-  //     window.location.reload(); // ✅ Reloads the page to refresh the book list
-  //   });
-  // }
-  addBook(): void {
+  ngOnChanges(changes: SimpleChanges): void {
+    if (changes['editBook'] && this.editBook) {
+      this.book = { ...this.editBook };
+    }
+  }
+
+  submit(): void {
     if (this.book.id === 0) {
-      // Add new book
       this.bookService.addBook(this.book).subscribe(() => {
         alert('Book added!');
         window.location.reload();
       });
     } else {
-      // Update existing book
       this.bookService.updateBook(this.book.id, this.book).subscribe(() => {
         alert('Book updated!');
         window.location.reload();
       });
     }
   }
-
 }
