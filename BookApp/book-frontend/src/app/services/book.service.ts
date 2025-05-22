@@ -14,7 +14,8 @@ export interface Book {
   providedIn: 'root'
 })
 export class BookService {
-  private apiUrl = 'https://localhost:5001/api/books'; // This is your ASP.NET backend URL
+  private apiUrl = 'http://localhost:5192/api/books';
+ // This is your ASP.NET backend URL
 
   constructor(private http: HttpClient) { }
 

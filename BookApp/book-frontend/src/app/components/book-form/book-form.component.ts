@@ -20,7 +20,7 @@ export class BookFormComponent {
   addBook(): void {
     this.bookService.addBook(this.book).subscribe(() => {
       alert('Book added successfully!');
-      window.location.reload(); // Reload to refresh the book list
+      window.location.reload(); // ✅ Reloads the page to refresh the book list
     });
   }
 }

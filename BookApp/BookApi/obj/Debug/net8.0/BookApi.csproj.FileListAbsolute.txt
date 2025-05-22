@@ -17,6 +17,7 @@ D:\Enhanzer Assignment\BookApp\BookApi\obj\Debug\net8.0\BookApi.AssemblyInfo.cs
 D:\Enhanzer Assignment\BookApp\BookApi\obj\Debug\net8.0\BookApi.csproj.CoreCompileInputs.cache
 D:\Enhanzer Assignment\BookApp\BookApi\obj\Debug\net8.0\BookApi.MvcApplicationPartsAssemblyInfo.cs
 D:\Enhanzer Assignment\BookApp\BookApi\obj\Debug\net8.0\BookApi.MvcApplicationPartsAssemblyInfo.cache
+D:\Enhanzer Assignment\BookApp\BookApi\obj\Debug\net8.0\BookApi.sourcelink.json
 D:\Enhanzer Assignment\BookApp\BookApi\obj\Debug\net8.0\staticwebassets.build.json
 D:\Enhanzer Assignment\BookApp\BookApi\obj\Debug\net8.0\staticwebassets.development.json
 D:\Enhanzer Assignment\BookApp\BookApi\obj\Debug\net8.0\staticwebassets\msbuild.BookApi.Microsoft.AspNetCore.StaticWebAssets.props
@@ -31,4 +32,3 @@ D:\Enhanzer Assignment\BookApp\BookApi\obj\Debug\net8.0\refint\BookApi.dll
 D:\Enhanzer Assignment\BookApp\BookApi\obj\Debug\net8.0\BookApi.pdb
 D:\Enhanzer Assignment\BookApp\BookApi\obj\Debug\net8.0\BookApi.genruntimeconfig.cache
 D:\Enhanzer Assignment\BookApp\BookApi\obj\Debug\net8.0\ref\BookApi.dll
-D:\Enhanzer Assignment\BookApp\BookApi\obj\Debug\net8.0\BookApi.sourcelink.json

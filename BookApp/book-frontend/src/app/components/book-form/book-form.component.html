@@ -1,15 +1,14 @@
-<h2>Add New Book</h2>
-<form (submit)="addBook()">
-  <label>Title:</label><br />
+<form (ngSubmit)="addBook()" #bookForm="ngForm">
+  <label>Title:</label>
   <input [(ngModel)]="book.title" name="title" required /><br /><br />
 
-  <label>Author:</label><br />
+  <label>Author:</label>
   <input [(ngModel)]="book.author" name="author" required /><br /><br />
 
-  <label>ISBN:</label><br />
+  <label>ISBN:</label>
   <input [(ngModel)]="book.isbn" name="isbn" required /><br /><br />
 
-  <label>Publication Date:</label><br />
+  <label>Publication Date:</label>
   <input [(ngModel)]="book.publicationDate" name="publicationDate" type="date" required /><br /><br />
 
   <button type="submit">Add Book</button>

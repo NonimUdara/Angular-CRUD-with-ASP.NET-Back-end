@@ -20,27 +20,6 @@ namespace BookApi.Controllers
             return Ok(book);
         }
 
-        [HttpPut("{id}")]
-        public IActionResult UpdateBook(int id, Book updatedBook)
-        {
-            var book = books.FirstOrDefault(b => b.Id == id);
-            if (book == null) return NotFound();
-
-            book.Title = updatedBook.Title;
-            book.Author = updatedBook.Author;
-            book.ISBN = updatedBook.ISBN;
-            book.PublicationDate = updatedBook.PublicationDate;
-            return Ok(book);
-        }
-
-        [HttpDelete("{id}")]
-        public IActionResult DeleteBook(int id)
-        {
-            var book = books.FirstOrDefault(b => b.Id == id);
-            if (book == null) return NotFound();
-
-            books.Remove(book);
-            return Ok();
-        }
+        // Optional: update and delete methods...
     }
 }
