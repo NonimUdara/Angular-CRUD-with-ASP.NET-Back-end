@@ -31,3 +31,4 @@ D:\Enhanzer Assignment\BookApp\BookApi\obj\Debug\net8.0\refint\BookApi.dll
 D:\Enhanzer Assignment\BookApp\BookApi\obj\Debug\net8.0\BookApi.pdb
 D:\Enhanzer Assignment\BookApp\BookApi\obj\Debug\net8.0\BookApi.genruntimeconfig.cache
 D:\Enhanzer Assignment\BookApp\BookApi\obj\Debug\net8.0\ref\BookApi.dll
+D:\Enhanzer Assignment\BookApp\BookApi\obj\Debug\net8.0\BookApi.sourcelink.json
