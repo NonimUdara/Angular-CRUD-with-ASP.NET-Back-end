@@ -8,17 +8,17 @@ namespace BookApi.Controllers
     [Route("api/[controller]")]
     public class BooksController : ControllerBase
     {
-        // In-memory book list
+        //In memory book list
         private static List<Book> books = new List<Book>();
 
-        // GET: api/books
+        //GET - api/books
         [HttpGet]
         public IActionResult GetBooks()
         {
             return Ok(books);
         }
 
-        // POST: api/books
+        //POST - api/books
         [HttpPost]
         public IActionResult AddBook(Book book)
         {
@@ -27,7 +27,7 @@ namespace BookApi.Controllers
             return Ok(book);
         }
 
-        // PUT: api/books/{id}
+        //PUT - api/books/{id}
         [HttpPut("{id}")]
         public IActionResult UpdateBook(int id, Book updatedBook)
         {
@@ -45,7 +45,7 @@ namespace BookApi.Controllers
             return Ok(book);
         }
 
-        // DELETE: api/books/{id}
+        //DELETE - api/books/{id}
         [HttpDelete("{id}")]
         public IActionResult DeleteBook(int id)
         {

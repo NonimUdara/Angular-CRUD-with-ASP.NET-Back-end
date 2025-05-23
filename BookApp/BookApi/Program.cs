@@ -1,6 +1,5 @@
 var builder = WebApplication.CreateBuilder(args);
 
-// Enable CORS
 builder.Services.AddCors(options =>
 {
     options.AddPolicy("AllowAll", policy =>
@@ -11,11 +10,11 @@ builder.Services.AddControllers();
 
 var app = builder.Build();
 
-app.UseRouting();               // ✅ Add this
+app.UseRouting();  
 app.UseCors("AllowAll");
 app.UseAuthorization();
 
-app.UseEndpoints(endpoints =>   // ✅ Add this block
+app.UseEndpoints(endpoints => 
 {
     endpoints.MapControllers();
 });
